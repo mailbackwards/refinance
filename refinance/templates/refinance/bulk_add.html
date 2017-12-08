@@ -1,0 +1,10 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+  <p>HELLO</p>
+  <form action="{% url "admin:refinance_transaction_actions" tool='bulk_add' %}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button class="btn btn-primary">ADD</button>
+  </form>
+{% endblock %}
