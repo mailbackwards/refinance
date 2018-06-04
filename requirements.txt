@@ -1,6 +1,7 @@
-Django==2.0
+Django==2.0.6
+django-environ==0.4.4
 django-object-actions==0.10.0
-djangorestframework==3.7.3
+djangorestframework==3.8.2
 python-dateutil==2.6.1
 pytz==2017.3
 six==1.11.0

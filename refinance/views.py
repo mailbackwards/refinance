@@ -22,7 +22,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class BankSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Bank
-        fields = ('name', 'accounts')
+        fields = ('name', 'account_set')
 
 
 class BankViewSet(viewsets.ModelViewSet):
