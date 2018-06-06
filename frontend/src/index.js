@@ -1,7 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import axios from 'axios';
+import C3Chart from 'react-c3js';
+import 'c3/c3.css';
+import './index.css';
+
+const data = {
+  columns: [
+    ['data1', 30, 200, 100, 400, 150, 250],
+    ['data2', 50, 20, 10, 40, 15, 25]
+  ]
+}
 
 
 class Row extends React.Component {
@@ -61,7 +70,10 @@ class Content extends React.Component {
   render() {
     const rows = this.state.rows
     return (
-      <Table rows={rows} />
+      <div>
+        <C3Chart data={data} />
+        <Table rows={rows} />
+      </div>
     )
   }
 }
